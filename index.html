@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificación de Pregunta</title>
+    <title>Mi Currículum</title>
+    <style>
+        /* Estilos CSS aquí */
+    </style>
 </head>
 <body>
-    <h1>Verificación de Pregunta</h1>
-    <p>Contesta la siguiente pregunta para acceder al contenido:</p>
-    <p>¿Cuánto es 2 + 2?</p>
-    <input type="text" id="respuesta">
-    <button onclick="verificarRespuesta()">Verificar</button>
 
-    <div id="contenido" style="display: none;">
-        <h2>Contenido Protegido</h2>
-        <p>Aquí está el contenido que solo se mostrará si respondes correctamente a la pregunta.</p>
-    </div>
+    <header>
+        <h1>Quinto Semestre TSJ</h1>
+    </header>
+
+    <section>
+        <table>
+            <tr>
+                <td>
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocJMafVZzopFUeWzTkjdRkBy2TEZWYmOsPQLA_nJZ4WwgNw=s288-c-no" alt="Mi Fotografía">
+                </td>
+                <td>
+                    <h2>Datos Personales</h2>
+                    <p>Nombre: Ivan Agustin Coria Palafox</p>
+                    <p>Dirección: Valle de Chalco #122, Valle Dorado</p>
+                    <p>Email: za210110201@zapopan.tecmm.edu.mx</p>
+                    <p>Teléfono: 3314880692</p>
+                    <p>Github: <a href="https://github.com/IvanACP" target="_blank">https://github.com/IvanACP</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/ivan-agustin-coria-palafox-32a140277/" target="_blank">https://www.linkedin.com/in/ivan-agustin-coria-palafox-32a140277/</a></p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Otras secciones aquí -->
 
     <script>
-        function verificarRespuesta() {
-            var respuestaUsuario = document.getElementById("respuesta").value;
-            if (respuestaUsuario === "4") {
-                document.getElementById("contenido").style.display = "block";
-            } else {
-                alert("Respuesta incorrecta. Inténtalo de nuevo.");
-            }
+        // Preguntar al usuario si acepta ver el contenido
+        var aceptar = confirm("¿Estás seguro de querer ver el contenido completo?");
+        if (!aceptar) {
+            // Cerrar la página si el usuario no acepta
+            window.close();
         }
     </script>
 </body>
 </html>
-
